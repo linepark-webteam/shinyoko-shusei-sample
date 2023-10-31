@@ -1,0 +1,12 @@
+jQuery使い方↓
+https://junpei-sugiyama.com/jquery-body/
+
+</body>タグ直前に記述するscryptタグ(jQuery)↓
+<script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+
+元のサイトのfvテキスト
+横浜の例会はあさから始まる！
+横浜では11会場目、関東では守成クラブ初となる「あさ」の会場です。

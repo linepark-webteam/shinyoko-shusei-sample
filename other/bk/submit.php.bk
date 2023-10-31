@@ -1,0 +1,19 @@
+<?php
+if($_POST){
+    $memberType = $_POST['memberType'];
+    $registrationLocation = $_POST['registrationLocation'];
+    $companyName = $_POST['companyName'];
+    $firstName = $_POST['firstName'];
+    $lastName = $_POST['lastName'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $message = $_POST['message'];
+
+    $content = "会員区分: $memberType\n登録会場: $registrationLocation\n会社名: $companyName\n名前: $firstName\n姓: $lastName\nEmail: $email\n連絡先: $phone\nお問い合わせ内容: $message";
+
+    // send email
+    mail("your@email.com", "Contact Form Message", $content, "From: $companyName <$email>");
+
+    header('Location: complete.html');
+}
+?>
