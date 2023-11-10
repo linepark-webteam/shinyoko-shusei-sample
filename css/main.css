@@ -33,7 +33,7 @@ body {
   }
 } */
 .img-wrap {
-  background: url(/img/fv.jpg) center top;
+  background: url(../img/fv.jpg) center top;
   background-size: cover;
   position: relative;
   height: 80vh;
