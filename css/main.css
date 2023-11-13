@@ -41,7 +41,7 @@ body {
 }
 @media screen and (min-width: 960px) {
   .img-wrap {
-    background-image: url(/img/fv.jpg);
+    background-image: url(../img/fv.jpg);
     width: 100vw;
     /* height: auto; */
   }
