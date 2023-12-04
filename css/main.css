@@ -33,7 +33,7 @@ body {
   }
 } */
 .img-wrap {
-  background: url(/shinyoko-shusei-sample/img/fv.jpg) center top;
+  background: url(../img/fv.jpg) center top;
   background-size: cover;
   position: relative;
   height: 80vh;
@@ -41,7 +41,7 @@ body {
 }
 @media screen and (min-width: 960px) {
   .img-wrap {
-    background-image: url(/shinyoko-shusei-sample/img/fv.jpg);
+    background-image: url(../img/fv.jpg);
     width: 100vw;
     /* height: auto; */
   }
@@ -272,8 +272,7 @@ body {
   /* 背景画像 */
   width: 100vw;
   height: 70vh;
-  /* background-image: url(/img/akarenga.png); */
-  background-image: url(/shinyoko-shusei-sample/img/yokohama-landmark-crop.jpg);
+  background-image: url(../img/yokohama-landmark-crop.jpg);
   background-color: rgba(0, 0, 0, 1);
   background-blend-mode: lighten;
   background-repeat: no-repeat;
@@ -292,7 +291,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .delimiter {
-    background-image: url(/shinyoko-shusei-sample/img/yokohama-landmark.jpg);
+    background-image: url(../img/yokohama-landmark.jpg);
     background-size: 290%;
     background-position: center bottom;
   }
@@ -305,7 +304,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .delimiter {
-    background-image: url(/shinyoko-shusei-sample/img/yokohama-landmark.jpg);
+    background-image: url(../img/yokohama-landmark.jpg);
     background-size: 190%;
   }
 }
