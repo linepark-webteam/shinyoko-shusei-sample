@@ -4,11 +4,10 @@
   display: flex;
   justify-content: left;
   padding: 0;
-  
   position: fixed;
   z-index: 100;
   transition: background-color .5s; /* 背景色と高さをじんわり変更 */
-  width: 100%;
+  width: 100vw;
   height: 13vw;
 }
 
