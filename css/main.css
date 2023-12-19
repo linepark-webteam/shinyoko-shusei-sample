@@ -380,14 +380,14 @@ body {
 }
 
 .is-contents-active {
-  display: flex;
+  display: block;
   align-items: center;
   flex-direction: column;
   justify-content: center;
 }
 @media screen and (min-width: 960px) {
   .is-contents-active {
-    display: flex;
+    display: block;
     flex-direction: row;
     justify-content: center;
   }
