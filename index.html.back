@@ -6,15 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="守成クラブ新横浜会場！守成クラブは、中小企業の経営者による異業種商談会を運営している全国組織の会です。" />
   <meta property="og:site_name" content="守成クラブ新横浜会場" />
-  <!-- <meta property="og:url" content="https://asayoko-shusei.online/" /> -->
+  <meta property="og:url" content="https://shinyoko-shusei.online/" />
   <meta property="og:title" content="守成クラブ新横浜会場" />
   <meta property="og:description" content="守成クラブ新横浜会場！守成クラブは、中小企業の経営者による異業種商談会を運営している全国組織の会です。" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:description" content="守成クラブ新横浜会場！守成クラブは、中小企業の経営者による異業種商談会を運営している全国組織の会です。">
   <meta name="twitter:title" content="守成クラブ新横浜会場">
-  <!-- <meta name="twitter:url" content="https://asayoko-shusei.online"> -->
-  <!-- <meta name="twitter:domain" content="asayoko-shusei.online"> -->
+  <meta name="twitter:url" content="https://shinyoko-shusei.online">
+  <meta name="twitter:domain" content="shinyoko-shusei.com">
   <title>守成クラブ｜新横浜会場</title>
   <link rel="icon" href="./img/logo.png" sizes="32x32" />
   <link rel="icon" href="./img/logo.png" sizes="192x192" />
@@ -100,7 +100,7 @@
         <div class="d-flex justify-content-center flex-column flex-lg-row mb-5">
           <div class="about-img">
             <!-- <div style="color: red; font-weight: bold;">写真変更（必要が有れば）</div> -->
-            <img src="./img/meeting2.jpg" alt="例会時の写真">
+            <img src="./img/meeting3.jpg" alt="例会時の写真">
           </div>
           <div class="about-text">
             <h2>例会情報</h2>
