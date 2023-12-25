@@ -79,6 +79,7 @@ $(function(){
   
   });
 
+  // contactform.js
   //ページを切り替えずに問い合わせ画面遷移
   $(document).ready(function() {
     $('#contact-form').on('submit', function(e) {
@@ -104,7 +105,7 @@ $(function(){
     $(document).on('submit', '#confirm-form', function(e) {
         e.preventDefault();
         $.ajax({
-            url: 'submit.php',
+            url: 'sendmail.php',
             type: 'post',
             data: $('#confirm-form').serialize(),
             success: function(result) {

@@ -13,7 +13,7 @@ if ($_POST) {
     $content = "会員区分: $memberType\n登録会場: $registrationLocation\n会社名: $companyName\n名前: $firstName\n姓: $lastName\nEmail: $email\n連絡先: $phone\nお問い合わせ内容: $message";
 
     // send email
-    mail("ywg.japan@gmail.com", "お問い合わせを受け付けました", $content, "From: $companyName <$email>");
+    mail("ko.nagai.0801@gmail.com", "お問い合わせを受け付けました", $content, "From: $companyName <$email>");
 
 
     echo '<div class="contact-headline"><h3>お問い合わせを受け付けました。ありがとうございます。</h3></div>';
