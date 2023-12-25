@@ -96,11 +96,10 @@
 
     <!-- コンテンツを構成するブロック -->
     <div class="about-contents-wrap container">
-      <div class="about-contents is-contents-active">
-        <div class="d-flex justify-content-center flex-column flex-lg-row mb-5">
+      <div class="about-contents row is-contents-active">
+        <div class="d-flex justify-content-center flex-column flex-lg-row col-lg-12 mb-5">
           <div class="about-img">
-            <!-- <div style="color: red; font-weight: bold;">写真変更（必要が有れば）</div> -->
-            <img src="./img/meeting3.jpg" alt="例会時の写真">
+            <img src="./img/meeting4.jpg" alt="例会時の写真">
           </div>
           <div class="about-text">
             <h2>例会情報</h2>
@@ -146,7 +145,7 @@
         <div class="d-flex justify-content-center flex-column flex-lg-row mb-5">
         <div class="about-img">
           <!-- <div style="color: red; font-weight: bold;">写真変更</div> -->
-          <img src="./img/group-photo.jpg" alt="守成クラブ集合写真">
+          <img src="./img/group-photo2.jpg" alt="守成クラブ集合写真">
         </div>
         <div class="about-text">
           <h2>守成クラブとは</h2>
