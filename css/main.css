@@ -22,7 +22,7 @@ body {
 }
 
 .img-wrap {
-  background: url(../img/fv.jpg) center top;
+  background: url(../img/fv.webp) center top;
   background-size: cover;
   position: relative;
   height: 80vh;
@@ -30,7 +30,7 @@ body {
 }
 @media screen and (min-width: 960px) {
   .img-wrap {
-    background-image: url(../img/fv.jpg);
+    background-image: url(../img/fv.webp);
     max-width: 100%;
   }
 }
@@ -260,7 +260,7 @@ body {
   /* 背景画像 */
   width: 100%;
   height: 70vh;
-  background-image: url(../img/yokohama-landmark-crop.jpg);
+  background-image: url(../img/yokohama-landmark-crop.webp);
   background-color: rgba(0, 0, 0, 1);
   background-blend-mode: lighten;
   background-repeat: no-repeat;
@@ -279,7 +279,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .delimiter {
-    background-image: url(../img/yokohama-landmark.jpg);
+    background-image: url(../img/yokohama-landmark.webp);
     background-size: 290%;
     background-position: center bottom;
   }
@@ -292,7 +292,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .delimiter {
-    background-image: url(../img/yokohama-landmark.jpg);
+    background-image: url(../img/yokohama-landmark.webp);
     background-size: 190%;
   }
 }
