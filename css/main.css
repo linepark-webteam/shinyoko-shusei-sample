@@ -513,7 +513,7 @@ body {
   }
 }
 .access-desc-map img {
-  width: 50vw;
+  /* width: 50vw; */
   height: auto;
 }
 @media screen and (min-width: 960px) {
