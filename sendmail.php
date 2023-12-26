@@ -1,9 +1,13 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require './vendor/autoload.php';
+require 'config.php'; // 設定ファイルを読み込む
 
 if ($_POST) {
     // 入力値のサニタイズ
@@ -19,31 +23,39 @@ if ($_POST) {
     $content = "会員区分: $memberType\n登録会場: $registrationLocation\n会社名: $companyName\n名前: $name\nふりがな: $kana\nEmail: $email\n連絡先: $phone\nお問い合わせ内容: $message";
 
     $mail = new PHPMailer(true);
+    $mail->CharSet = 'UTF-8';
 
     try {
-        $mail->isMail(); // Use PHP's mail function
+        //Server settings
+        $mail->isSMTP(); // SMTPを使用する
+        $mail->Host = SMTP_HOST; // config.phpからSMTPホストを読み込む
+        $mail->SMTPAuth = true; // SMTP authentication を有効化
+        $mail->Username = SMTP_USER; // config.phpからSMTPユーザー名を読み込む
+        $mail->Password = SMTP_PASSWORD; // config.phpからSMTPパスワードを読み込む
+        $mail->SMTPSecure = SMTP_SECURE;
+        $mail->Port = SMTP_PORT; // config.phpからポート番号を読み込む
 
-        //Recipients
+
+        // ユーザーへの確認メール設定
         $mail->setFrom('noreply@shinyoko-shusei.com', 'お問い合わせサポート');
-        $mail->addAddress($email, $name); // User's email address
-        // Add CC or BCC if you need
+        $mail->addAddress($email, $name); // ユーザーのメールアドレスを設定
 
-        //Content
-        $mail->isHTML(true); // Set email format to HTML
+        // メールの内容
+        $mail->isHTML(true); // HTMLメールを設定
         $mail->Subject = 'お問い合わせありがとうございます';
-        $mail->Body    = nl2br($content); // Convert newlines to <br> tags
-        $mail->AltBody = strip_tags($content); // Plain text for non-HTML mail clients
+        $mail->Body    = nl2br("新横浜会場HPお問い合わせフォームより、\n以下の内容でお問い合わせを受け付けました。\n\n" . $content); // HTML形式の本文
 
-        $mail->send();
+        $mail->send(); // ユーザーへメール送信
 
-        // 管理者への通知
-        $mail->clearAddresses(); // Clear all addresses
-        $mail->addAddress('ko.nagai.0801@gmail.com'); // Admin email address
-        $mail->Subject = '新しいお問い合わせがありました';
-        $mail->Body    = nl2br("新しいお問い合わせが以下の内容でありました。\n\n" . $content);
-        $mail->send();
+        // 管理者への通知メール
+        $mail->clearAddresses(); // アドレスをクリア
+        $mail->addAddress('ko.nagai.0801@gmail.com'); // 管理者のメールアドレス
+        // $mail->addAddress('ko.nagai.0801@gmail.com'); // 管理者のメールアドレス
+        $mail->Subject = '新横浜会場HPより、新しいお問い合わせがありました';
+        $mail->Body    = nl2br("新横浜会場HPお問い合わせフォームより、\n新しいお問い合わせを以下の内容で受け付けました。\n\n" . $content);
+        $mail->send(); // 管理者へメール送信
 
-        header('Location: thanks.php'); // Redirect to thank you page
+        header('Location: thanks.php'); // 送信後にサンクスページへリダイレクト
     } catch (Exception $e) {
         echo "申し訳ありませんが、メッセージを送信できませんでした: " . $mail->ErrorInfo;
     }
