@@ -2,3 +2,5 @@
 *.txt
 #otherフォルダ内のフォルダ・ファイルを無視
 other/
+
+config.php
