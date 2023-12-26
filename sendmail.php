@@ -4,50 +4,48 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require './vendor/autoload.php';
-require './config.php';
 
 if ($_POST) {
-  $memberType = $_POST['memberType'];
-  $registrationLocation = $_POST['registrationLocation'];
-  $companyName = $_POST['companyName'];
-  $name = $_POST['name'];
-  $kana = $_POST['kana'];
-  $email = $_POST['email'];
-  $phone = $_POST['phone'];
-  $message = $_POST['message'];
+    // 入力値のサニタイズ
+    $memberType = htmlspecialchars($_POST['memberType'], ENT_QUOTES, 'UTF-8');
+    $registrationLocation = htmlspecialchars($_POST['registrationLocation'], ENT_QUOTES, 'UTF-8');
+    $companyName = htmlspecialchars($_POST['companyName'], ENT_QUOTES, 'UTF-8');
+    $name = htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8');
+    $kana = htmlspecialchars($_POST['kana'], ENT_QUOTES, 'UTF-8');
+    $email = htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8');
+    $phone = htmlspecialchars($_POST['phone'], ENT_QUOTES, 'UTF-8');
+    $message = htmlspecialchars($_POST['message'], ENT_QUOTES, 'UTF-8');
 
-  $content = "会員区分: $memberType\n登録会場: $registrationLocation\n会社名: $companyName\n名前: $name\nふりがな: $kana\nEmail: $email\n連絡先: $phone\nお問い合わせ内容: $message";
+    $content = "会員区分: $memberType\n登録会場: $registrationLocation\n会社名: $companyName\n名前: $name\nふりがな: $kana\nEmail: $email\n連絡先: $phone\nお問い合わせ内容: $message";
 
-  // PHPMailerオブジェクトの作成
-  $mail = new PHPMailer(true);
+    $mail = new PHPMailer(true);
 
-  try {
-    //Server settings
-    $mail->isSMTP();
-    $mail->Host = SMTP_HOST;  // SMTPサーバーを指定
-    $mail->SMTPAuth = true;   // SMTP authentication を有効化
-    $mail->Username = SMTP_USER;  // SMTPサーバーのユーザー名
-    $mail->Password = SMTP_PASSWORD; // SMTPサーバーのパスワード
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // 暗号化を有効化
-    $mail->Port = SMTP_PORT;  // TCPポートを指定
+    try {
+        $mail->isMail(); // Use PHP's mail function
 
-    // ユーザーへの確認メール設定
-    $mail->setFrom('noreply@asayoko-shusei.com', 'お問い合わせサポート'); // 送信者のアドレスと名前を設定
-    $mail->addAddress($email);  // 受信者（ユーザー）のメールアドレスを設定
-    $mail->Subject = 'お問い合わせありがとうございます'; // メールの件名
-    $mail->Body    = "以下の内容でお問い合わせを受け付けました。\n\n" . $content; // ユーザー向けメール本文
-    $mail->send(); // ユーザーへメール送信
+        //Recipients
+        $mail->setFrom('noreply@shinyoko-shusei.com', 'お問い合わせサポート');
+        $mail->addAddress($email, $name); // User's email address
+        // Add CC or BCC if you need
 
-    // 管理者への通知メール
-    $mail->clearAddresses();  // 前のaddAddressをクリア
-    $mail->addAddress('info@asayoko-shusei.com'); // 管理者のメールアドレス
-    $mail->Subject = '新しいお問い合わせがありました';
-    $mail->Body    = "新しいお問い合わせが以下の内容でありました。\n\n" . $content; // 管理者向けメール本文
-    $mail->send(); // 管理者へメール送信
-    // 送信成功時の処理
-    header('Location: thanks.php'); // 送信後にthanks.phpにリダイレクト
-  } catch (Exception $e) {
-    // 送信失敗時の処理
-    echo "申し訳ありませんが、メッセージを送信できませんでした。";
-  }
+        //Content
+        $mail->isHTML(true); // Set email format to HTML
+        $mail->Subject = 'お問い合わせありがとうございます';
+        $mail->Body    = nl2br($content); // Convert newlines to <br> tags
+        $mail->AltBody = strip_tags($content); // Plain text for non-HTML mail clients
+
+        $mail->send();
+
+        // 管理者への通知
+        $mail->clearAddresses(); // Clear all addresses
+        $mail->addAddress('ko.nagai.0801@gmail.com'); // Admin email address
+        $mail->Subject = '新しいお問い合わせがありました';
+        $mail->Body    = nl2br("新しいお問い合わせが以下の内容でありました。\n\n" . $content);
+        $mail->send();
+
+        header('Location: thanks.php'); // Redirect to thank you page
+    } catch (Exception $e) {
+        echo "申し訳ありませんが、メッセージを送信できませんでした: " . $mail->ErrorInfo;
+    }
 }
+?>

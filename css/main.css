@@ -7,6 +7,11 @@ body {
   font-family: "Noto Sans JP", "Roboto", sans-serif;
 }
 
+/* 世話人紹介リンク */
+.manager {
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+
 /* ファーストビュー */
 .fv {
   height: auto;
