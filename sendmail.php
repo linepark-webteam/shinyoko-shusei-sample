@@ -7,7 +7,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require './vendor/autoload.php';
-require 'config.php'; // 設定ファイルを読み込む
+require './secret/config.php'; // 設定ファイルを読み込む
 
 if ($_POST) {
     // 入力値のサニタイズ
