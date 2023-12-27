@@ -220,8 +220,8 @@ const bios = {
       <tr><td>会社PR</td><td>貿易輸出入、外国人材紹介、日本語学校運営、オーダースーツ業、やってますのでご相談下さい</td></tr>
     </table>
     <div class="img-container row">
-      <a href="#desc" class="col-3"><img class="each-img4 col-12" src="../img/sasagawa2.webp" alt="笹川 政吉"></a>
-      <a href="#desc" class="col-3"><img class="each-img5 col-12" src="../img/sasagawa3.webp" alt="笹川 政吉"></a>
+      <a href="#desc" class="col-3"><img class="each-img4 col-12" src="./img/sasagawa2.webp" alt="笹川 政吉"></a>
+      <a href="#desc" class="col-3"><img class="each-img5 col-12" src="./img/sasagawa3.webp" alt="笹川 政吉"></a>
     </div>`,
   "./img/nishikawa1.webp": `
         <table class="manager-table table table-bordered mt-5">
