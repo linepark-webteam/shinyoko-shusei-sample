@@ -400,12 +400,16 @@ body {
 
 @media screen and (min-width: 960px) {
   .is-contents-active img {
-    width: 500px;
+    max-width: 500px;
   }
 }
 
-.about-text {
-  margin-left: 1vw;
+.manager-table{
+  font-size: clamp(.7rem, 1vw, 2rem);
+}
+
+.manager-text {
+  font-size: clamp(.7rem, 1vw, 2rem);
 }
 @media screen and (min-width: 960px) {
   .about-text {

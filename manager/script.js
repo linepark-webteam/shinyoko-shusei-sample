@@ -25,7 +25,7 @@ const imageData = [
 
 const bios = {
   "../img/sasagawa2.webp": `
-    <table class="table table-bordered my-5">
+    <table class="manager-table table table-bordered my-5">
       <tr><td class="col-2">会社名</td><td>国際貿易YMG株式会社</td></tr>
       <tr><td>役職</td><td>代表取締役</td></tr>
       <tr><td>業種</td><td>貿易業、貿易商社、外国人材紹介、オーダースーツFC本部</td></tr>
@@ -36,14 +36,14 @@ const bios = {
       <a href="#desc" class="col-3"><img class="each-img5 col-12" src="../img/sasagawa3.webp" alt="笹川 政吉"></a>
     </div>`,
   "../img/nishikawa1.webp": `
-        <table class="table table-bordered my-5">
+        <table class="manager-table table table-bordered my-5">
           <tr><td class="col-2">会社名</td><td>東京海上あんしんエージェンシー</td></tr>
           <tr><td>役職</td><td>代表</td></tr>
           <tr><td>業種</td><td>生保・損保代理店</td></tr>
           <tr><td>会社PR</td><td>皆様の不安をあんしんに変える為に、日々活動しております。よろしくお願い致します。</td></tr>
         </table>`,
   "../img/tokuda1.webp": `
-    <table class="table table-bordered my-5">
+    <table class="manager-table table table-bordered my-5">
       <tr><td class="col-2">会社名</td><td>トータルビューティーサロン出逢い</td></tr>
       <tr><td>役職</td><td>代表</td></tr>
       <tr><td>業種</td><td>美容・健康</td></tr>
