@@ -189,12 +189,12 @@ $(document).ready(function () {
 // imageData、bios、およびrepresentativesのデータ構造を定義します
 const imageData = [
   {
-    src: "./img/sasagawa3.webp",
+    src: "./img/sasagawa2.webp",
     repName: "代表世話人",
     repTitle: "笹川 政吉",
   },
   {
-    src: "./img/sasagawa2.webp",
+    src: "./img/sasagawa3.webp",
     repName: "代表世話人",
     repTitle: "笹川 政吉",
   },
@@ -212,7 +212,7 @@ const imageData = [
 ];
 
 const bios = {
-  "./img/sasagawa3.webp": `
+  "./img/sasagawa2.webp": `
     <table class="manager-table table table-bordered mt-5">
       <tr><td class="col-3 col-lg-2">会社名</td><td>国際貿易YMG株式会社</td></tr>
       <tr><td>役職</td><td>代表取締役</td></tr>
@@ -220,8 +220,8 @@ const bios = {
       <tr><td>会社PR</td><td>貿易輸出入、外国人材紹介、日本語学校運営、オーダースーツ業、やってますのでご相談下さい</td></tr>
     </table>
     <div class="img-container row">
-      <a href="#desc" class="col-3"><img class="each-img4 col-12" src="../img/sasagawa3.webp" alt="笹川 政吉"></a>
-      <a href="#desc" class="col-3"><img class="each-img5 col-12" src="../img/sasagawa2.webp" alt="笹川 政吉"></a>
+      <a href="#desc" class="col-3"><img class="each-img4 col-12" src="../img/sasagawa2.webp" alt="笹川 政吉"></a>
+      <a href="#desc" class="col-3"><img class="each-img5 col-12" src="../img/sasagawa3.webp" alt="笹川 政吉"></a>
     </div>`,
   "./img/nishikawa1.webp": `
         <table class="manager-table table table-bordered mt-5">
@@ -241,11 +241,11 @@ const bios = {
 };
 
 const representatives = {
-  "./img/sasagawa3.webp": {
+  "./img/sasagawa2.webp": {
     repTitle: "代表世話人",
     repName: "笹川 政吉",
   },
-  "./img/sasagawa2.webp": {
+  "./img/sasagawa3.webp": {
     repTitle: "代表世話人",
     repName: "笹川 政吉",
   },
