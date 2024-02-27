@@ -315,34 +315,21 @@ document.querySelectorAll(".thumb").forEach((thumbnail) => {
 attachImageContainerListener();
 
 
-// 申し込みフォームの複数表示
-function toggleDisplayByDate(className, startDate, endDate) {
-  let currentDate = new Date();
-  let elements = document.getElementsByClassName(className);
-  let displayStyle =
-    currentDate >= new Date(startDate) && currentDate < new Date(endDate)
-      ? "block"
-      : "none";
 
-  for (let i = 0; i < elements.length; i++) {
-    elements[i].style.display = displayStyle;
+// 申込みフォームの表示・非表示自動切換え
+$(document).ready(function() {
+  function toggleDisplayByEndDate(elementClass, endDate) {
+    let now = new Date();
+    let end = new Date(endDate);
+
+    if (now <= end) {
+      $("." + elementClass).show();
+    } else {
+      $("." + elementClass).hide();
+    }
   }
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  toggleDisplayByDate(
-    "schedule1",
-    "2023-11-17T00:00:00",
-    "2024-01-22T23:59:59"
-  );
-  toggleDisplayByDate(
-    "schedule2",
-    "2023-11-30T00:00:00",
-    "2024-02-26T23:59:59"
-  );
-  toggleDisplayByDate(
-    "schedule3",
-    "2023-＊＊-＊＊T00:00:00",
-    "2024-＊＊-＊＊T23:59:59"
-  );
+  // 表示終了日時を指定
+  toggleDisplayByEndDate("schedule1", "2024-03-25T23:59:59");
+  // toggleDisplayByEndDate("schedule2", "2024-04-20T23:59:59");
+  // toggleDisplayByEndDate("schedule3", "2024-05-18T23:59:59");
 });
