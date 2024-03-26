@@ -329,7 +329,7 @@ $(document).ready(function() {
     }
   }
   // 表示終了日時を指定
-  toggleDisplayByEndDate("schedule1", "2024-03-25T23:59:59");
+  toggleDisplayByEndDate("schedule1", "2024-04-22T23:59:59");
   // toggleDisplayByEndDate("schedule2", "2024-04-22T23:59:59");
   // toggleDisplayByEndDate("schedule3", "2024-05-27T23:59:59");
 });
