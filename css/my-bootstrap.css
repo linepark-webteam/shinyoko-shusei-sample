@@ -1,6 +1,6 @@
 /* ボタンのスタイル */
 .btn {
-  border-radius: 2px;
+  border-radius: 40px;
   padding-top: 1vw;
   padding-bottom: 1vw;
   font-size: 24px;
@@ -77,4 +77,23 @@ a {
 }
 a:hover {
   color: #333;
+}
+
+.btn-primary {
+  background-color: #4663b2; /* 背景色 */
+  border-color: #4663b2; /* 枠線の色 */
+}
+
+.btn-primary:hover {
+  background-color: #3a51a0; /* ホバー時の背景色 */
+  border-color: #334d95; /* ホバー時の枠線の色 */
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(70, 99, 178, 0.5); /* フォーカス時のシャドウ */
+}
+
+.btn-primary:disabled {
+  background-color: #4663b2; /* 無効時の背景色 */
+  border-color: #4663b2; /* 無効時の枠線の色 */
 }
