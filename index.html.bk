@@ -32,16 +32,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VJM04VGJ56"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VJM04VGJ56');
-</script>
-
 <!-- Google tag (gtag.js) new -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3TMZ3DZJQ"></script>
 <script>
@@ -81,14 +71,24 @@
 
   <section class="application container">
     <h2>例会申し込みフォーム</h2>
-    <!-- <div class="application-btn schedule1">
-      <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=7127">
-        <span class="label">第3回 03月25日(月) 例会お申し込みフォーム</span>
-      </a>
-    </div> -->
     <div class="application-btn schedule1">
       <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=7129">
         <span class="label">第5回 05月27日(月) 例会お申し込みフォーム</span>
+      </a>
+    </div>
+    <div class="application-btn schedule2">
+      <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=7130">
+        <span class="label">第6回 06月24日(月) 例会お申し込みフォーム</span>
+      </a>
+    </div>
+    <div class="application-btn schedule3">
+      <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=7131">
+        <span class="label">第7回 07月22日(月) 例会お申し込みフォーム</span>
+      </a>
+    </div>
+    <div class="application-btn schedule4">
+      <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=7680">
+        <span class="label">第8回 08月26日(月) 例会お申し込みフォーム</span>
       </a>
     </div>
   </section>
@@ -136,6 +136,18 @@
             <div class="schedule1">
               <h3>第5回例会</h3>
               <p>日時:2024年05月27日(月) </p>
+            </div>
+            <div class="schedule2">
+              <h3>第6回例会</h3>
+              <p>日時:2024年06月24日(月) </p>
+            </div>
+            <div class="schedule3">
+              <h3>第7回例会</h3>
+              <p>日時:2024年07月22日(月) </p>
+            </div>
+            <div class="schedule4">
+              <h3>第8回例会</h3>
+              <p>日時:2024年08月26日(月) </p>
             </div>
             <p>受付17:00～(ゲスト様事前説明 17:00～) <br>
               開始時間 : 18:00 <br>
@@ -305,19 +317,28 @@
   </section>
 
   <!-- 例会申し込みボタン -->
-  <div class="application container">
+  <section class="application container">
     <div class="application-btn schedule1">
       <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=7129">
         <span class="label">第5回 05月27日(月) 例会お申し込みフォーム</span>
       </a>
     </div>
-  <!-- <div class="application container">
-    <div class="application-btn schedule1">
-      <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=7127">
-        <span class="label">第3回 03月25日(月) 例会お申し込みフォーム</span>
+    <div class="application-btn schedule2">
+      <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=7130">
+        <span class="label">第6回 06月24日(月) 例会お申し込みフォーム</span>
       </a>
-    </div> -->
-  </div>
+    </div>
+    <div class="application-btn schedule3">
+      <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=7131">
+        <span class="label">第7回 07月22日(月) 例会お申し込みフォーム</span>
+      </a>
+    </div>
+    <div class="application-btn schedule4">
+      <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=7680">
+        <span class="label">第8回 08月26日(月) 例会お申し込みフォーム</span>
+      </a>
+    </div>
+  </section>
 
   <!-- アクセス -->
   <section class="access">
@@ -407,9 +428,10 @@
           <label for="message">お問い合わせ内容:　<span class="required">必須</span></label>
           <textarea id="message" name="message" required></textarea>
         </div>
-        <div class="submit-button">
+        <div class="submit-button mt-5">
           <div class="form-group">
-            <input type="submit" value="確認画面へ">
+              <button type="submit" class="btn btn-primary col-6 px-4 py-3"><span class="fs-lg-6 fs-6 fw-bold">確認画面へ</span></button>
+            </div>
           </div>
         </div>
       </form>
