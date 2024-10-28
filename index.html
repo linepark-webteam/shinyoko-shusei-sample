@@ -36,7 +36,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3TMZ3DZJQ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-Z3TMZ3DZJQ');
@@ -47,7 +47,8 @@
   <header class="header row js-header container-fluid">
     <div class="d-flex justify-content-between px-3 px-lg-5">
       <div class="d-flex align-items-center">
-        <h1 class="logo"><a href="#"><img class="col-2 col-md-4" src="./img/heading-logo.webp" alt="守成クラブ新横浜" /></a></h1>
+        <h1 class="logo"><a href="#"><img class="col-2 col-md-4" src="./img/heading-logo.webp" alt="守成クラブ新横浜" /></a>
+        </h1>
       </div>
       <!-- <h3 class="manager d-flex justify-content-end align-items-center col-3"><a href="../manager/">世話人紹介</a></h3> -->
     </div>
@@ -71,26 +72,28 @@
 
   <section class="application container">
     <h2>例会申し込みフォーム</h2>
-    <div class="application-btn schedule1">
-      <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=7680">
-        <span class="label">第8回 08月26日(月) 例会お申し込みフォーム</span>
-      </a>
-    </div>
-    <div class="application-btn schedule2">
-      <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=7849">
-        <span class="label">第9回 09月23日(月) 例会お申し込みフォーム</span>
-      </a>
-    </div>
-    <div class="application-btn schedule3">
-      <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=7850">
-        <span class="label">第10回 10月28日(月) 例会お申し込みフォーム</span>
-      </a>
-    </div>
-    <!-- <div class="application-btn schedule4">
-      <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=7680">
-        <span class="label">第8回 08月26日(月) 例会お申し込みフォーム</span>
-      </a>
-    </div> -->
+
+    <div class="schedule-group">
+
+      <div class="application-btn schedule" data-start-date="2024-10-27T00:00:00" data-end-date="2024-10-28T23:59:59">
+        <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=7850">
+          <span class="label">第10回 10月28日(月) 例会お申し込みフォーム</span>
+        </a>
+      </div>
+
+
+      <div class="application-btn schedule" data-start-date="2024-10-28T00:00:00" data-end-date="2024-11-25T23:59:59">
+        <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=8164">
+          <span class="label">第11回 11月25日(月) 例会お申し込みフォーム</span>
+        </a>
+      </div>
+
+      <div class="application-btn schedule" data-start-date="2024-10-28T00:00:00" data-end-date="2024-12-23T23:59:59">
+        <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=8165">
+          <span class="label">第12回 12月23日(月) 例会お申し込みフォーム</span>
+        </a>
+      </div>
+
   </section>
 
   <!-- 守成ロゴ -->
@@ -129,26 +132,24 @@
           </div>
           <div class="about-text">
             <h2>例会情報</h2>
-            <!-- <div class="schedule1">
-              <h3>第3回例会</h3>
-              <p>日時:2024年03月25日(月) </p>
-            </div> -->
-            <div class="schedule1">
-              <h3>第8回例会</h3>
-              <p>日時:2024年08月26日(月) </p>
+
+            <div class="schedule-group">
+
+              <div class="schedule" data-start-date="2024-10-27T00:00:00" data-end-date="2024-10-28T23:59:59">
+                <h3>第10回例会</h3>
+                <p>日時:2024年10月28日(月) </p>
+              </div>
+              <div class="schedule" data-start-date="2024-10-27T00:00:00" data-end-date="2024-11-25T23:59:59">
+                <h3>第11回例会</h3>
+                <p>日時:2024年11月25日(月) </p>
+              </div>
+              <div class="schedule" data-start-date="2024-10-27T00:00:00" data-end-date="2024-12-23T23:59:59">
+                <h3>第12回例会</h3>
+                <p>日時:2024年12月23日(月) </p>
+              </div>
+
             </div>
-            <div class="schedule2">
-              <h3>第9回例会</h3>
-              <p>日時:2024年09月23日(月) </p>
-            </div>
-            <div class="schedule3">
-              <h3>第10回例会</h3>
-              <p>日時:2024年10月28日(月) </p>
-            </div>
-            <!-- <div class="schedule4">
-              <h3>第8回例会</h3>
-              <p>日時:2024年08月26日(月) </p>
-            </div> -->
+
             <p>受付開始 17:00<br>
               ゲスト説明 17:30～ (ゲスト様は17:15までにお越しください) <br>
               開始時間 : 18:00 <br>
@@ -161,27 +162,7 @@
         </div>
       </div>
       <div class="about-contents">
-        <!-- <div class="d-block">
-          <div class="d-flex flex-column flex-lg-row mb-5">
-            <div class="about-img">
-              <img src="./img/sasagawa1.webp" alt="笹川代表">
-            </div>
-            <div>
-              <div class="about-text">
-                <h2>代表あいさつ</h2>
-                <h3>代表世話人　笹川 政吉</h3>
-                <p>
-                  皆様こんにちは。2024 年 1 月 22 日に神奈川県で 12 番目の会場、<br>
-                  「新横浜会場」を立ち上げる運びとなりました。<br>
-                  2021 年はコロナ渦の中、例会は時短になり、<br>
-                  懇親会もなくなり、なかなかビジネスにつながらなかったことも多かったと思います。<br>
-                  新型コロナウイルスの感染拡大が収まり、世の中はまた新たな秩序を求めて動き出しコロナと共存する時代が長く続くと考えられます。<br>
-                  新横浜会場は、新しい時代に向けて、皆様のビジネスを拡大できるチャンスある会場の一つとして 皆様にご活用いただければと思います。
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> -->
+
         <div class="d-block">
           <div class="d-flex flex-column flex-lg-row mb-5">
             <div class="about-img">
@@ -203,27 +184,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="d-block">
-          <div class="d-flex flex-column flex-lg-row mb-5">
-            <div class="about-img">
-              <img src="./img/sasagawa3.webp" alt="笹川代表">
-            </div>
-            <div>
-              <div class="about-text">
-                <h2>代表あいさつ</h2>
-                <h3>代表世話人　笹川 政吉</h3>
-                <p>
-                  皆様こんにちは。2024 年 1 月 22 日に神奈川県で 12 番目の会場、<br>
-                  「新横浜会場」を立ち上げる運びとなりました。<br>
-                  2021 年はコロナ渦の中、例会は時短になり、<br>
-                  懇親会もなくなり、なかなかビジネスにつながらなかったことも多かったと思います。<br>
-                  新型コロナウイルスの感染拡大が収まり、世の中はまた新たな秩序を求めて動き出しコロナと共存する時代が長く続くと考えられます。<br>
-                  新横浜会場は、新しい時代に向けて、皆様のビジネスを拡大できるチャンスある会場の一つとして 皆様にご活用いただければと思います。
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> -->
       </div>
 
       <div class="about-contents">
@@ -259,45 +219,47 @@
                     </tr>
                   </table>
                   <div class="img-container row">
-                    <a href="#desc" class="col-3"><img class="each-img2 col-12" src="./img/sasagawa2.webp" alt="笹川 政吉"></a>
-                    <a href="#desc" class="col-3"><img class="each-img3 col-12" src="./img/sasagawa3.webp" alt="笹川 政吉"></a>
+                    <a href="#desc" class="col-3"><img class="each-img2 col-12" src="./img/sasagawa2.webp"
+                        alt="笹川 政吉"></a>
+                    <a href="#desc" class="col-3"><img class="each-img3 col-12" src="./img/sasagawa3.webp"
+                        alt="笹川 政吉"></a>
                   </div>
                 </div>
               </div>
             </div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <div class="col-12">
-                  <div class="d-flex flex-wrap">
-                    <!-- 各thumb要素にmx (X軸マージン) やmy (Y軸マージン) クラスを追加 -->
-                    <div class="col-3 col-lg-2 mb-3 mx-1">
-                      <a href="#desc" class="thumb mx-1">
-                        <p class="manager-text name mb-0">笹川 政吉</p>
-                        <img class="col-12" src="./img/sasagawa2.webp" alt="笹川 政吉">
-                        <p class="manager-text title mt-1">代表世話人</p>
-                      </a>
-                    </div>
-                    <div class="col-3 col-lg-2 mb-3 mx-1">
-                      <a href="#desc" class="thumb mx-1">
-                        <p class="manager-text name mb-0">西川 毅</p>
-                        <img class="col-12" src="./img/nishikawa1.webp" alt="西川 毅">
-                        <p class="manager-text title mt-1">副代表世話人</p>
-                      </a>
-                    </div>
-                    <div class="col-3 col-lg-2 mb-3 mx-1">
-                      <a href="#desc" class="thumb mx-1">
-                        <p class="manager-text name mb-0">徳田 広美</p>
-                        <img class="col-12" src="./img/tokuda1.webp" alt="徳田 広美">
-                        <p class="manager-text title mt-1">世話人</p>
-                      </a>
-                    </div>
-                    <!-- ... 他の要素 ... -->
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="d-flex flex-wrap">
+                  <!-- 各thumb要素にmx (X軸マージン) やmy (Y軸マージン) クラスを追加 -->
+                  <div class="col-3 col-lg-2 mb-3 mx-1">
+                    <a href="#desc" class="thumb mx-1">
+                      <p class="manager-text name mb-0">笹川 政吉</p>
+                      <img class="col-12" src="./img/sasagawa2.webp" alt="笹川 政吉">
+                      <p class="manager-text title mt-1">代表世話人</p>
+                    </a>
                   </div>
+                  <div class="col-3 col-lg-2 mb-3 mx-1">
+                    <a href="#desc" class="thumb mx-1">
+                      <p class="manager-text name mb-0">西川 毅</p>
+                      <img class="col-12" src="./img/nishikawa1.webp" alt="西川 毅">
+                      <p class="manager-text title mt-1">副代表世話人</p>
+                    </a>
+                  </div>
+                  <div class="col-3 col-lg-2 mb-3 mx-1">
+                    <a href="#desc" class="thumb mx-1">
+                      <p class="manager-text name mb-0">徳田 広美</p>
+                      <img class="col-12" src="./img/tokuda1.webp" alt="徳田 広美">
+                      <p class="manager-text title mt-1">世話人</p>
+                    </a>
+                  </div>
+                  <!-- ... 他の要素 ... -->
                 </div>
               </div>
-              </div>
-      </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="about-contents">
@@ -319,26 +281,26 @@
 
   <!-- 例会申し込みボタン -->
   <section class="application container">
-    <div class="application-btn schedule1">
-      <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=7680">
-        <span class="label">第8回 08月26日(月) 例会お申し込みフォーム</span>
-      </a>
-    </div>
-    <div class="application-btn schedule2">
-      <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=7849">
-        <span class="label">第9回 09月23日(月) 例会お申し込みフォーム</span>
-      </a>
-    </div>
-    <div class="application-btn schedule3">
-      <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=7850">
-        <span class="label">第10回 10月28日(月) 例会お申し込みフォーム</span>
-      </a>
-    </div>
-    <!-- <div class="application-btn schedule4">
-      <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=7680">
-        <span class="label">第8回 08月26日(月) 例会お申し込みフォーム</span>
-      </a>
-    </div> -->
+    <div class="schedule-group">
+
+      <div class="application-btn schedule" data-start-date="2024-10-27T00:00:00" data-end-date="2024-10-28T23:59:59">
+        <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=7850">
+          <span class="label">第10回 10月28日(月) 例会お申し込みフォーム</span>
+        </a>
+      </div>
+
+
+      <div class="application-btn schedule" data-start-date="2024-10-28T00:00:00" data-end-date="2024-11-25T23:59:59">
+        <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=8164">
+          <span class="label">第11回 11月25日(月) 例会お申し込みフォーム</span>
+        </a>
+      </div>
+
+      <div class="application-btn schedule" data-start-date="2024-10-28T00:00:00" data-end-date="2024-12-23T23:59:59">
+        <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=8165">
+          <span class="label">第12回 12月23日(月) 例会お申し込みフォーム</span>
+        </a>
+      </div>
   </section>
 
   <!-- アクセス -->
@@ -352,7 +314,6 @@
           <p>アルカンシエル横浜</p>
         </div>
         <div class="access-img">
-          <!-- <div style="color: red; font-weight: bold;">会場の写真</div> -->
           <img src="./img/image.webp" alt="会場写真">
         </div>
       </div>
@@ -431,12 +392,13 @@
         </div>
         <div class="submit-button mt-5">
           <div class="form-group">
-              <button type="submit" class="btn btn-primary col-6 px-4 py-3"><span class="fs-lg-6 fs-6 fw-bold">確認画面へ</span></button>
-            </div>
+            <button type="submit" class="btn btn-primary col-6 px-4 py-3"><span
+                class="fs-lg-6 fs-6 fw-bold">確認画面へ</span></button>
           </div>
         </div>
-      </form>
-      <div id="form-result"></div>
+    </div>
+    </form>
+    <div id="form-result"></div>
     </div>
 
   </section>
