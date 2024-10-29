@@ -421,7 +421,7 @@ body {
 .about-text h2 {
   font-size: calc(22px + 2 * ((100vw - 320px) / 640));
   font-weight: bold;
-  margin-bottom: 3vw;
+  margin-bottom: 20px;
 }
 @media screen and (min-width: 960px) {
   .about-text h2 {
