@@ -119,7 +119,7 @@ body {
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  margin-bottom: 20vw;
+  margin-bottom: 0;
 }
 @media screen and (min-width: 960px) {
   .application {
@@ -247,13 +247,14 @@ body {
 /* 守成クラブ紹介 */
 .about {
   max-width: 1920px;
-  margin: 0 auto 5vw;
+  /* margin: 0 auto 5vw; */
+  margin: 0 auto;
 }
-@media screen and (min-width: 960px) {
+/* @media screen and (min-width: 960px) {
   .about {
     margin: 0 auto 100px;
   }
-}
+} */
 
 .about-wrap {
   display: flex;
@@ -463,13 +464,12 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 10vw auto;
+  margin: 50px auto;
   font-size: calc(18px + 4 * ((100vw - 320px) / 640));;
 }
 @media screen and (min-width: 960px) {
   .access-headline {
     font-size: 22px;
-    margin: 50px auto;
   }
 }
 .access-head {
