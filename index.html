@@ -43,7 +43,7 @@
 </script>
 
 <body>
-  <!-- ヘッダーここから -->
+
   <header class="header row js-header container-fluid">
     <div class="d-flex justify-content-between px-3 px-lg-5">
       <div class="d-flex align-items-center">
@@ -53,14 +53,8 @@
       <!-- <h3 class="manager d-flex justify-content-end align-items-center col-3"><a href="../manager/">世話人紹介</a></h3> -->
     </div>
   </header>
-  <!-- ヘッダーここまで -->
 
-  <!-- TOPに戻るボタン -->
-  <div class="container-fruid">
-    <a href="#" id="page_top"></a>
-  </div>
-
-  <!-- ファーストビュー -->
+  <!-- FV -->
   <section class="fv js-mv slider">
     <div class="container-fruid">
       <div class="col-12 img-wrap">
@@ -75,13 +69,6 @@
 
     <div class="schedule-group">
 
-      <div class="application-btn schedule" data-start-date="2024-10-27T00:00:00" data-end-date="2024-10-28T23:59:59">
-        <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=7850">
-          <span class="label">第10回 10月28日(月) 例会お申し込みフォーム</span>
-        </a>
-      </div>
-
-
       <div class="application-btn schedule" data-start-date="2024-10-28T00:00:00" data-end-date="2024-11-25T23:59:59">
         <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=8164">
           <span class="label">第11回 11月25日(月) 例会お申し込みフォーム</span>
@@ -91,6 +78,12 @@
       <div class="application-btn schedule" data-start-date="2024-10-28T00:00:00" data-end-date="2024-12-23T23:59:59">
         <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=8165">
           <span class="label">第12回 12月23日(月) 例会お申し込みフォーム</span>
+        </a>
+      </div>
+
+      <div class="application-btn schedule" data-start-date="2024-11-11T00:00:00" data-end-date="2025-01-27T23:59:59">
+        <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=8307" style="height: auto; line-height: 22px;">
+          <span class="label">守成クラブ新横浜 一周年<br>第13回 1月27日(月) 例会お申し込みフォーム</span>
         </a>
       </div>
 
@@ -123,7 +116,7 @@
       </div>
     </div>
 
-    <!-- コンテンツを構成するブロック -->
+    <!-- コンテンツブロック -->
     <div class="about-contents-wrap container">
       <div class="about-contents row is-contents-active">
         <div class="d-flex justify-content-center flex-column flex-lg-row col-lg-12 mb-5">
@@ -135,17 +128,19 @@
 
             <div class="schedule-group">
 
-              <div class="schedule" data-start-date="2024-10-27T00:00:00" data-end-date="2024-10-28T23:59:59">
-                <h3>第10回例会</h3>
-                <p>日時:2024年10月28日(月) </p>
-              </div>
               <div class="schedule" data-start-date="2024-10-27T00:00:00" data-end-date="2024-11-25T23:59:59">
                 <h3>第11回例会</h3>
                 <p>日時:2024年11月25日(月) </p>
               </div>
+
               <div class="schedule" data-start-date="2024-10-27T00:00:00" data-end-date="2024-12-23T23:59:59">
                 <h3>第12回例会</h3>
                 <p>日時:2024年12月23日(月) </p>
+              </div>
+
+              <div class="schedule" data-start-date="2024-11-11T00:00:00" data-end-date="2025-01-27T23:59:59">
+                <h3>第13回例会　守成クラブ新横浜 一周年</h3>
+                <p>日時:2025年1月27日(月) </p>
               </div>
 
             </div>
@@ -200,7 +195,7 @@
               </div>
               <div class="col-md-6">
                 <div id="mainBio">
-                  <table class="manager-table row table table-bordered mt-5"><!--デフォルトの表示-->
+                  <table class="manager-table row table table-bordered mt-5">
                     <tr>
                       <td class="col-3 col-lg-2">会社名</td>
                       <td>国際貿易YMG株式会社</td>
@@ -301,9 +296,16 @@
           <span class="label">第12回 12月23日(月) 例会お申し込みフォーム</span>
         </a>
       </div>
+
+      <div class="application-btn schedule" data-start-date="2024-11-11T00:00:00" data-end-date="2025-01-27T23:59:59">
+        <a href="https://www.shuseiclub.jp/shinyokohama/entry_form/index.php?e=8307" style="height: auto; line-height: 22px;">
+          <span class="label">守成クラブ新横浜 一周年<br>第13回 1月27日(月) 例会お申し込みフォーム</span>
+        </a>
+      </div>
+
   </section>
 
-  <!-- アクセス -->
+  <!-- Access -->
   <section class="access">
     <div class="container">
       <div class="access-headline">
@@ -400,8 +402,12 @@
     </form>
     <div id="form-result"></div>
     </div>
-
   </section>
+
+  <!-- toTOP button -->
+  <div class="container-fruid">
+    <a href="#" id="page_top"></a>
+  </div>
 
   <footer class="container-fluid">
     <div class="footer-items">
